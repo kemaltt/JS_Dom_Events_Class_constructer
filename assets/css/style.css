@@ -24,6 +24,11 @@ section {
     border-radius: 5px;
 }
 
+.toggle {
+    background: #000;
+    color: #fff;
+}
+
 section:nth-of-type(2) ul {
     list-style-type: none;
     margin: 0;

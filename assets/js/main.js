@@ -5,9 +5,9 @@ let example = document.getElementsByClassName('example');
 
 const myFunction = () => {
     for (let i = 0; i < example.length; i++) {
-        example[i].style.backgroundColor = '#000';
-        example[i].style.color = '#fff';
-
+        // example[i].style.backgroundColor = '#000';
+        // example[i].style.color = '#fff';
+        example[i].classList.toggle('toggle');
     }
 
 }
@@ -102,7 +102,7 @@ let optionSelected = document.getElementById('option_selected');
 
 mySelect.addEventListener('change', (e) => {
     let selected = e.target.value;
-    console.log(selected);
+    // console.log(selected);
     optionSelected.innerHTML = selected;
 })
 
@@ -172,7 +172,7 @@ let red = 0;
 let green = 0;
 let blue = 0;
 document.querySelectorAll('input[type="range"]').forEach(el => {
-    el.addEventListener('click', (e) => {
+    el.addEventListener('change', (e) => {
         console.log(e.target.value);
         if (e.target.id === 'rot') {
             red = e.target.value;

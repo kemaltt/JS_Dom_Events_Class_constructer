@@ -197,3 +197,60 @@ document.querySelectorAll('input[type="range"]').forEach(el => {
     })
 
 })
+
+//Class_constructer ==============================================
+//Lev1_1-------------------------------------------
+class Ball {
+    constructor(ballType = 'regular') {
+        this.ballType = ballType;
+    }
+}
+let ball1 = new Ball();
+console.log(ball1);
+
+let ball2 = new Ball("super")
+console.log(ball2);
+//Lev1_2-------------------------------------------
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     info() {
+//         console.log(`${this.name} is ${this.age} years old.`);
+//     }
+// }
+// let person = new Person('Max', 20);
+// console.log(person);
+// person.info();
+
+//Lev1_3-------------------------------------------
+
+let name = document.getElementById('name');
+let age = document.getElementById('age');
+let examCheck = document.getElementById('examCheck');
+let button = document.getElementById('button1');
+let result = document.getElementById('result');
+
+
+
+button.addEventListener('click', () => {
+
+    let person = new Person(name.value, age.value);
+    person.info();
+    person.writeInfo();
+})
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    info() {
+        console.log(`${this.name} is ${this.age} years old.`);
+    }
+    writeInfo() {
+        examCheck.checked ? result.innerHTML += ` <li style="color: red;">${this.name} , ${this.age} years old.</li>` : result.innerHTML += ` <li style="color: black;">${this.name} , ${this.age} years old.</li>`;
+    }
+}

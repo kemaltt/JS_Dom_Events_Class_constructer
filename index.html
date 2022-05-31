@@ -10,7 +10,9 @@
 </head>
 
 <body>
+    <!-- DOM -->
     <!-- Lev1_2 -->
+    <h2>DOM</h2>
     <section>
 
         <div class="style">
@@ -112,7 +114,82 @@
     </section>
 
 
+    <!-- EVENTS -->
+    <!-- Lev1_5 -->
+    <h2>Events</h2>
+    <section>
+        <div>
+            <h3> Klickzähler </h3>
+            <button id="clickMe">Click me: <span id="output_zähler"></span></button>
+            <h5>Gute Praxis: kein JavaScript-Code im HTML</h5>
+        </div>
+    </section>
 
+    <!-- Lev1_6 -->
+    <section>
+
+        <select id="my_select">
+            <option value="" disabled selected>Select One</option>
+            <option value="select1">Select 1</option>
+            <option value="select2">Select 2</option>
+            <option value="select3">Select 3</option>
+            <option value="select4">Select 4</option>
+            <option value="select5">Select 5</option>
+        </select>
+
+        <p> Sie haben ausgewält <span id="option_selected"></span></p>
+
+    </section>
+
+    <!-- Lev2_1 -->
+    <section id="section9">
+        <ul id="umschalter">
+            <li id="grauTaste"></li>
+            <li id="weissTaste"></li>
+            <li id="blauTaste"></li>
+            <li id="gelbTaste"></li>
+        </ul>
+
+
+        <h1>Farbschema Umschalter</h1>
+
+        <p>Versuche auf eine der obigen Farben zu klicken, um die Farben auf dieser Seite zu ändern! </p>
+
+    </section>
+
+    <!-- Lev2_1 -->
+    <section>
+
+        <h1 id="output_keycode"></h1>
+        <div>
+            <span class="title">Key</span>
+            <span class="title">KeyCode</span>
+            <span class="title">Code</span>
+            <span id="key"></span>
+            <span id="key_code"></span>
+            <span id="code"></span>
+        </div>
+
+    </section>
+
+    <!-- Lev3_1 -->
+    <section id="section11">
+        <h1>Meine dynamische Webseite</h1>
+        <p id="demo">Wähle eine Farbe:</p>
+
+        <p>
+            <button id="rosa" class="btn" onclick="changeBackground('pink')">Rosa</button>
+            <button id="lila" class="btn" onclick="changeBackground('purple')">Lila</button>
+            <button id="orange" class="btn" onclick="changeBackground('orange')">Orange</button>
+        </p>
+        <p>
+            <input type="range" id="rot" value="255" min="0" max="255" onchange="changeHandle()" style="background:red"> Rot
+            <br>
+            <input type="range" id="grun" value="255" min="0" max="255" onchange="changeHandle()" style="background:green"> Grün
+            <br>
+            <input type="range" id="blau" value="255" min="0" max="255" onchange="changeHandle()" style="background:blue"> Blau
+        </p>
+    </section>
 
     <script src="assets/js/main.js"></script>
 </body>

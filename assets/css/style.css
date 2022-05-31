@@ -1,3 +1,9 @@
+h2 {
+    color: tomato;
+    text-align: center;
+    background-color: yellowgreen;
+}
+
 section {
     margin-bottom: 5vh;
     margin: 5vh 25%;
@@ -202,4 +208,123 @@ section:nth-of-type(6) .bigCrazy {
     border-radius: 10px;
     text-shadow: 2px 8px 2px #4CAF50;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/* Eventa */
+
+
+/* Lev1_5 */
+
+section:nth-of-type(7) {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 20pt;
+    font-weight: normal;
+    background: linear-gradient(-90deg, #f6ad7b, #be7575);
+}
+
+section:nth-of-type(7) div {
+    margin: 100px auto;
+    text-align: center;
+}
+
+section:nth-of-type(7) button {
+    padding: 20px;
+    background: transparent;
+    text-shadow: 1px 1px 1px #202020;
+    font-family: "Lato", sans-serif;
+    font-size: 18pt;
+    border: 1px solid #c2e8ce;
+    color: #c2e8ce;
+}
+
+
+/* Lev1_6 */
+
+section:nth-of-type(8) select {
+    padding: 15px 20px;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 2rem;
+    outline: 0;
+}
+
+
+/* Lev2_1 */
+
+section:nth-of-type(9) {
+    margin: 3em;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+section:nth-of-type(9) h1 {
+    line-height: 1.25;
+    margin: 1em 0 0;
+}
+
+section:nth-of-type(9) p {
+    margin: .5em 0;
+}
+
+section:nth-of-type(9) #umschalter {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+section:nth-of-type(9) #umschalter li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 15px 0;
+    border-radius: 18px;
+    border: 3px solid black;
+}
+
+section:nth-of-type(9) #grauTaste {
+    background: gray;
+}
+
+section:nth-of-type(9) #weissTaste {
+    background: white;
+}
+
+section:nth-of-type(9) #blauTaste {
+    background: blue;
+}
+
+section:nth-of-type(9) #gelbTaste {
+    background: yellow;
+}
+
+
+/* Lev2_2 */
+
+section:nth-of-type(10) {
+    background-color: rgb(239, 159, 130);
+    text-align: center;
+    padding: 20px;
+}
+
+section:nth-of-type(10) h1 {
+    font-size: 4rem;
+    font-family: 'Karla', sans-serif;
+}
+
+section:nth-of-type(10) div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+section:nth-of-type(10) .title {
+    background-color: #035aa6;
+    padding: 5px;
+    color: #fff;
 }

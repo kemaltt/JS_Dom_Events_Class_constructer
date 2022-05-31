@@ -80,3 +80,120 @@ const bigCrazy = () => {
     element.classList.remove('small', 'middle');
     console.log('big');
 }
+
+
+//Events==============================================
+
+//Lev1_5-------------------------------------------
+
+let btn2 = document.getElementById('clickMe');
+let outputZähler = document.getElementById('output_zähler');
+anzahl = 0;
+outputZähler.innerHTML = anzahl;
+btn2.addEventListener('click', (e) => {
+    anzahl += 1;
+    outputZähler.innerHTML = anzahl;
+});
+
+//Lev1_6-------------------------------------------
+
+let mySelect = document.getElementById('my_select');
+let optionSelected = document.getElementById('option_selected');
+
+mySelect.addEventListener('change', (e) => {
+    let selected = e.target.value;
+    console.log(selected);
+    optionSelected.innerHTML = selected;
+})
+
+
+//Lev2_1-------------------------------------------
+
+let listElement = document.querySelectorAll('#umschalter li');
+let section9 = document.getElementById('section9');
+// console.log(listElement);
+listElement.forEach(element => {
+    element.addEventListener('click', (e) => {
+        let clicked = e.target.id;
+        console.log(clicked);
+        if (clicked === 'grauTaste') {
+            section9.style.backgroundColor = 'gray';
+        } else if (clicked === 'weissTaste') {
+            section9.style.backgroundColor = 'white';
+        } else if (clicked === 'blauTaste') {
+            section9.style.backgroundColor = 'blue';
+        } else if (clicked === 'gelbTaste') {
+            section9.style.backgroundColor = 'yellow';
+        }
+
+    });
+})
+
+//Lev2_2-------------------------------------------
+let key = document.getElementById('key');
+let keyCode = document.getElementById('key_code');
+let code = document.getElementById('code');
+let outputKeyCode = document.getElementById('output_keycode');
+
+document.body.addEventListener('keydown', (e) => {
+    // console.log(e);
+
+    console.log(e.key);
+    key.innerHTML = e.key;
+    code.innerHTML = e.code;
+    keyCode.innerHTML = e.keyCode;
+    outputKeyCode.innerHTML = e.keyCode;
+
+})
+
+//Lev3_1-------------------------------------------
+let section11 = document.getElementById('section11');
+let btn3 = document.querySelectorAll('.btn');
+let demo = document.getElementById('demo');
+let count = 0;
+
+btn3.forEach(el => {
+    console.log(el);
+    el.addEventListener('click', (e) => {
+        count += 1;
+        demo.innerHTML = `Wir haben die Farbe ${count} mal geändert`;
+
+        // console.log(e.target.id);
+        if (e.target.id === 'rosa') {
+            section11.style.backgroundColor = 'pink';
+        } else if (e.target.id === 'lila') {
+            section11.style.backgroundColor = 'violet';
+        } else if (e.target.id === 'orange') {
+            section11.style.backgroundColor = 'orange';
+        }
+    })
+})
+let red = 0;
+let green = 0;
+let blue = 0;
+document.querySelectorAll('input[type="range"]').forEach(el => {
+    el.addEventListener('click', (e) => {
+        console.log(e.target.value);
+        if (e.target.id === 'rot') {
+            red = e.target.value;
+        } else if (e.target.id === 'grun') {
+            green = e.target.value;
+        } else if (e.target.id === 'blau') {
+            blue = e.target.value;
+        }
+        const toHex = (num) => {
+            let hex = Number(num).toString(16);
+            if (hex.length === 1) {
+                hex = '0' + hex;
+                return hex;
+            }
+            return hex;
+        }
+
+        console.log(toHex(2));
+
+        section11.style.backgroundColor = `rgb(${red},${green},${blue})`;
+        demo.innerHTML = `rgb${red},${green},${blue}= #${toHex(red)}${toHex(green)}${toHex(blue)}`;
+    })
+
+})

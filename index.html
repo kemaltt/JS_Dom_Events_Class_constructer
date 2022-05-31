@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Dom Events Class_constructer</title>
+</head>
+
+<body>
+    <!-- Lev1_2 -->
+    <section>
+
+        <div class="style">
+            <div class="example">
+                Ein div mit class="example".
+            </div>
+
+            <div class="example">
+                Ein weiteres div mit class="example".
+            </div>
+
+            <p class="example">Dies ist ein p-Element mit class="example"</p>
+
+            <p>Dies ist ein <span class="example">span</span> Element mit class="example" in einem anderen p-Element.
+            </p>
+
+            <p>Klicken Sie auf die Button, um die Hintergrundfarbe aller Elemente mit class="example" zu ändern.</p>
+
+            <button class="example" onclick="myFunction()">Versuchen Sie es</button>
+        </div>
+
+
+    </section>
+
+    <!-- Lev2_1 -->
+    <section>
+        <ul>
+            <div class="listContainer">
+                <li><a class="nav" id="navHome" href="#home">Home</a></li>
+                <li><a class="nav" id="navNews" href="#news">News</a></li>
+                <li><a class="nav" id="navContact" href="#contact">Contact</a></li>
+            </div>
+            <li class="nav"><a class="active" onclick="navChange()" id="navChange">Change me</a></li>
+        </ul>
+    </section>
+
+    <!-- Lev2_2 -->
+    <section>
+        <div>
+            <form id="form1" onsubmit='return false'>
+                <label for="vorname">Vorname</label><input type="text" id="vorname" name="vorname" placeholder="Dein Name..."><label for="nachname">Last Name</label><input type="text" id="nachname" name="nachname" placeholder="Dein Nachname...">
+                <label for="land">Land</label><select id="land" name="land">
+                    <option value="Australia">Australia</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Usa">USA</option>
+                </select>
+                <input type="submit" onclick="getInput()" value="Submit">
+            </form>
+        </div>
+
+
+    </section>
+    <!-- Lev2_3 -->
+    <section>
+        <ul>
+            <div class="listContainer">
+                <li><a class="nav1" id="navHome" href="#home">Home</a></li>
+                <li><a class="nav1" id="navNews" href="#news">News</a></li>
+                <li><a class="nav1" id="navContact" href="#contact">Contact</a></li>
+            </div>
+            <li class="nav"><a class="active" onclick="changeMe()" id="navChange1">Change me</a></li>
+        </ul>
+    </section>
+
+    <!-- Lev2_4 -->
+
+    <section id="section5">
+
+
+        <form>
+            <select id="farbeAuswahlen">
+                <option id="1">Medium Orchid</option>
+                <option id="2">Mint Cream</option>
+                <option id="3">Dodger Blue</option>
+                <option id="4">Goldenrod</option>
+                <option id="5">Wheat</option>
+                <option id="6">Medium Turquoise</option>
+                <option id="7">Moccasin</option>
+                <option id="8">Fire Brick</option>
+                <option id="9">Lime Green</option>
+                <option id="10">Slate Gray</option>
+            </select>
+            <button id="button">Farbe von Liste Background farben</button>
+        </form>
+
+    </section>
+
+    <!-- Lev2_10 -->
+    <section>
+        <button onclick="small()">Small</button>
+        <button onclick="middle()">Middle</button>
+        <button onclick="bigCrazy()">Big & Crazy</button>
+
+        <div class="wrapper">
+            <div id="element" class="small">
+                <h1>Hallo classList!</h1>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

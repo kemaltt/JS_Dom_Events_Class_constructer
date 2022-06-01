@@ -150,53 +150,83 @@ document.body.addEventListener('keydown', (e) => {
 let section11 = document.getElementById('section11');
 let btn3 = document.querySelectorAll('.btn');
 let demo = document.getElementById('demo');
+let rot = document.getElementById('rot');
+let grun = document.getElementById('grun');
+let blau = document.getElementById('blau');
 let count = 0;
 
-btn3.forEach(el => {
-    console.log(el);
-    el.addEventListener('click', (e) => {
-        count += 1;
-        demo.innerHTML = `Wir haben die Farbe ${count} mal geändert`;
+const changeBackground = (farbe) => {
+    console.log(farbe);
+    section11.style.backgroundColor = farbe;
+    count += 1;
+    demo.innerHTML = `Wir haben die Farbe ${count} mal geändert`;
+}
 
-        // console.log(e.target.id);
-        if (e.target.id === 'rosa') {
-            section11.style.backgroundColor = 'pink';
-        } else if (e.target.id === 'lila') {
-            section11.style.backgroundColor = 'violet';
-        } else if (e.target.id === 'orange') {
-            section11.style.backgroundColor = 'orange';
-        }
-    })
-})
-let red = 0;
-let green = 0;
-let blue = 0;
-document.querySelectorAll('input[type="range"]').forEach(el => {
-    el.addEventListener('change', (e) => {
-        console.log(e.target.value);
-        if (e.target.id === 'rot') {
-            red = e.target.value;
-        } else if (e.target.id === 'grun') {
-            green = e.target.value;
-        } else if (e.target.id === 'blau') {
-            blue = e.target.value;
-        }
-        const toHex = (num) => {
-            let hex = Number(num).toString(16);
-            if (hex.length === 1) {
-                hex = '0' + hex;
-                return hex;
-            }
-            return hex;
-        }
+const changeHandle = () => {
+    let red = Number(rot.value);
+    let green = grun.value * 1;
+    let blue = Number(blau.value);
+    let rgb = `rgb(${red},${green},${blue})`;
+    let rgbToHex = `#${toHex(red)}${toHex(green)}${toHex(blue)}`;
+    // console.log(rgb);
+    section11.style.backgroundColor = rgb;
+    demo.innerHTML = `${rgb} =  ${rgbToHex}`;
 
-        console.log(toHex(2));
+}
 
-        section11.style.backgroundColor = `rgb(${red},${green},${blue})`;
-        demo.innerHTML = `rgb${red},${green},${blue}= #${toHex(red)}${toHex(green)}${toHex(blue)}`;
-    })
+const toHex = (num) => {
+    let hex = num.toString(16);
+    if (hex.length === 1) {
+        return hex = '0' + hex;
+    }
+    return hex;
+}
 
-})
+//2.Lösung
+
+// btn3.forEach(el => {
+//     console.log(el);
+//     el.addEventListener('click', (e) => {
+//         count += 1;
+//         demo.innerHTML = `Wir haben die Farbe ${count} mal geändert`;
+
+//         // console.log(e.target.id);
+//         if (e.target.id === 'rosa') {
+//             section11.style.backgroundColor = 'pink';
+//         } else if (e.target.id === 'lila') {
+//             section11.style.backgroundColor = 'violet';
+//         } else if (e.target.id === 'orange') {
+//             section11.style.backgroundColor = 'orange';
+//         }
+//     })
+// })
+
+// document.querySelectorAll('input[type="range"]').forEach(el => {
+//     el.addEventListener('change', (e) => {
+//         console.log(e.target.value);
+//         if (e.target.id === 'rot') {
+//             red = e.target.value;
+//         } else if (e.target.id === 'grun') {
+//             green = e.target.value;
+//         } else if (e.target.id === 'blau') {
+//             blue = e.target.value;
+//         }
+//         const toHex = (num) => {
+//             let hex = Number(num).toString(16);
+//             if (hex.length === 1) {
+//                 hex = '0' + hex;
+//                 return hex;
+//             }
+//             return hex;
+//         }
+
+//         console.log(toHex(2));
+
+//         section11.style.backgroundColor = `rgb(${red},${green},${blue})`;
+//         demo.innerHTML = `rgb${red},${green},${blue}= #${toHex(red)}${toHex(green)}${toHex(blue)}`;
+//     })
+
+// })
 
 //Class_constructer ==============================================
 //Lev1_1-------------------------------------------
